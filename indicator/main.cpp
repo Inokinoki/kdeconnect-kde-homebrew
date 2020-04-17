@@ -98,7 +98,7 @@ int main(int argc, char** argv)
             }
         }
 
-#if (defined Q_OS_MAC || defined Q_OS_WIN)
+#if (defined USE_PRIVATE_DBUS || defined Q_OS_WIN)
         // Add quit menu
         menu->addAction(i18n("Quit"), [](){
             auto message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kdeconnect.daemon"),
