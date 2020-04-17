@@ -7,8 +7,20 @@
 	<key>Program</key>
 	<string>@KDE_INSTALL_FULL_LIBEXECDIR@/kdeconnectd</string>
 	<key>StandardOutPath</key>
-    <string>/var/logs/kdeconnectd.log</string>
+    <string>/tmp/kdeconnectd.log</string>
     <key>StandardErrorPath</key>
-    <string>/var/logs/kdeconnectd.log</string>
+    <string>/tmp/kdeconnectd.log</string>
+
+	<key>WorkingDirectory</key>
+	<string>/usr/local/Cellar/kdeconnect/HEAD-219097d/</string>
+
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>QT_PLUGIN_PATH</key>
+		<string>/usr/local/Cellar/kdeconnect/HEAD-219097d/lib/plugins</string>
+	</dict>
+
+	<key>RunAtLoad</key>
+	<true/>
 </dict>
 </plist>
