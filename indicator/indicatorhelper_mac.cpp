@@ -61,7 +61,12 @@ void IndicatorHelper::postInit()
 
 void IndicatorHelper::iconPathHook()
 {
+#ifndef APPLE_HOMEBREW_BUILD
     const QString iconPath = QStandardPaths::locate(QStandardPaths::AppDataLocation, QStringLiteral("icons"), QStandardPaths::LocateDirectory);
+#else
+    // Based on the work directory
+    const QString iconPath =  QStringLiteral("share/icons");
+#endif
     if (!iconPath.isNull()) {
         QStringList themeSearchPaths = QIcon::themeSearchPaths();
         themeSearchPaths << iconPath;
@@ -136,7 +141,12 @@ void IndicatorHelper::systrayIconHook(QSystemTrayIcon &systray)
 #else
 void IndicatorHelper::systrayIconHook(KStatusNotifierItem &systray)
 {
+#ifndef APPLE_HOMEBREW_BUILD
     const QString iconPath = QStandardPaths::locate(QStandardPaths::AppDataLocation, QStringLiteral("icons"), QStandardPaths::LocateDirectory);
+#else
+    // Based on the work directory
+    const QString iconPath =  QStringLiteral("share/icons");
+#endif
     if (!iconPath.isNull()) {
         systray.setIconByName(QStringLiteral("kdeconnectindicatordark"));
     } else {

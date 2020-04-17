@@ -84,6 +84,10 @@ set(ZSH_AUTOCOMPLETE_DIR "${CMAKE_INSTALL_PREFIX}/share/zsh/site-functions")
 endif()
 
 option(APPLE_HOMEBREW_BUILD "Build for Homebrew" OFF)
+if (APPLE_HOMEBREW_BUILD)
+    add_compile_definitions(APPLE_HOMEBREW_BUILD)
+endif()
+
 option(PRIVATE_DBUS_ENABLED "Use private dbus session for kdeconnect" OFF)
 if(PRIVATE_DBUS_ENABLED OR APPLE AND NOT APPLE_HOMEBREW_BUILD)
     add_compile_definitions(USE_PRIVATE_DBUS)
