@@ -71,6 +71,7 @@ void IndicatorHelper::iconPathHook()
 
 int IndicatorHelper::daemonHook(QProcess &kdeconnectd)
 {
+#ifdef USE_PRIVATE_DBUS
     // Unset launchctl env, avoid block
     DBusHelper::macosUnsetLaunchctlEnv();
 
@@ -87,6 +88,7 @@ int IndicatorHelper::daemonHook(QProcess &kdeconnectd)
                               QMessageBox::Abort);
         return -1;
     }
+#endif
 
     // Wait for dbus daemon env
     QProcess getLaunchdDBusEnv;
