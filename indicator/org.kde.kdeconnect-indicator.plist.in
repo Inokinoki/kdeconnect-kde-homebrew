@@ -5,7 +5,7 @@
 	<key>Label</key>
 	<string>org.kde.kdeconnect-indicator</string>
 	<key>Program</key>
-	<string>@CMAKE_BINARY_DIR@/kdeconnect-indicator.app/Contents/MacOS/kdeconnect-indicator</string>
+	<string>@CMAKE_INSTALL_PREFIX@/bin/kdeconnect-indicator.app/Contents/MacOS/kdeconnect-indicator</string>
 	<key>StandardOutPath</key>
     <string>/tmp/kdeconnect-indicator.log</string>
     <key>StandardErrorPath</key>
