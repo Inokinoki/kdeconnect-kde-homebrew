@@ -5,19 +5,19 @@
 	<key>Label</key>
 	<string>org.kde.kdeconnect-indicator</string>
 	<key>Program</key>
-	<string>/usr/local/Cellar/kdeconnect/HEAD-219097d/bin/kdeconnect-indicator.app/Contents/MacOS/kdeconnect-indicator</string>
+	<string>@CMAKE_BINARY_DIR@/kdeconnect-indicator.app/Contents/MacOS/kdeconnect-indicator</string>
 	<key>StandardOutPath</key>
     <string>/tmp/kdeconnect-indicator.log</string>
     <key>StandardErrorPath</key>
     <string>/tmp/kdeconnect-indicator.log</string>
 
 	<key>WorkingDirectory</key>
-	<string>@INSTALL_DIR@</string>
+	<string>@CMAKE_INSTALL_PREFIX@</string>
 
 	<key>EnvironmentVariables</key>
 	<dict>
 		<key>QT_PLUGIN_PATH</key>
-		<string>@PLUGIN_INSTALL_DIR@</string>
+		<string>@CMAKE_INSTALL_PREFIX@/@PLUGIN_INSTALL_DIR@</string>
 	</dict>
 
 	<key>RunAtLoad</key>
