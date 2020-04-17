@@ -12,12 +12,12 @@
     <string>/tmp/kdeconnectd.log</string>
 
 	<key>WorkingDirectory</key>
-	<string>/usr/local/Cellar/kdeconnect/HEAD-219097d/</string>
+	<string>@INSTALL_DIR@</string>
 
 	<key>EnvironmentVariables</key>
 	<dict>
 		<key>QT_PLUGIN_PATH</key>
-		<string>/usr/local/Cellar/kdeconnect/HEAD-219097d/lib/plugins</string>
+		<string>@PLUGIN_INSTALL_DIR@</string>
 	</dict>
 
 	<key>RunAtLoad</key>
