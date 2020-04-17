@@ -39,6 +39,9 @@ set_target_properties(kdeconnect-indicator PROPERTIES
     MACOSX_BUNDLE_LONG_VERSION_STRING "${KDECONNECT_VERSION_STRING}"
     MACOSX_BUNDLE_SHORT_VERSION_STRING "${KDECONNECT_VERSION_MAJOR}.${KDECONNECT_VERSION_MINOR}.${KDECONNECT_VERSION_PATCH}"
     MACOSX_BUNDLE_GUI_IDENTIFIER "org.kde.kdeconnect")
+# Indicator launchd configuration
+configure_file(org.kde.kdeconnect-indicator.plist.in ${CMAKE_CURRENT_BINARY_DIR}/org.kde.kdeconnect-indicator.plist)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.kdeconnect-indicator.plist DESTINATION ${AUTOSTART_INSTALL_DIR})
 endif()
 
 install(TARGETS kdeconnect-indicator ${INSTALL_TARGETS_DEFAULT_ARGS})

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>org.kde.kdeconnect-indicator</string>
+	<key>Program</key>
+	<string>/usr/local/Cellar/kdeconnect/HEAD-219097d/bin/kdeconnect-indicator.app/Contents/MacOS/kdeconnect-indicator</string>
+	<key>StandardOutPath</key>
+    <string>/tmp/kdeconnect-indicator.log</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/kdeconnect-indicator.log</string>
+
+	<key>WorkingDirectory</key>
+	<string>@INSTALL_DIR@</string>
+
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>QT_PLUGIN_PATH</key>
+		<string>@PLUGIN_INSTALL_DIR@</string>
+	</dict>
+
+	<key>RunAtLoad</key>
+	<true/>
+</dict>
+</plist>
