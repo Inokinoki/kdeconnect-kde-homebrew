@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>org.kde.kdeconnectd</string>
+	<key>Program</key>
+	<string>@KDE_INSTALL_FULL_LIBEXECDIR@/kdeconnectd</string>
+	<key>StandardOutPath</key>
+    <string>/var/logs/kdeconnectd.log</string>
+    <key>StandardErrorPath</key>
+    <string>/var/logs/kdeconnectd.log</string>
+</dict>
+</plist>
